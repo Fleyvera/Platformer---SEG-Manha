@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d07isu6od250g"]
+[gd_scene load_steps=11 format=3 uid="uid://d07isu6od250g"]
 
 [ext_resource type="PackedScene" uid="uid://ijyns5c618ip" path="res://Prefabs/player.tscn" id="1_22vqe"]
 [ext_resource type="Texture2D" uid="uid://cxce2101co11p" path="res://Sprites/Background/Purple.png" id="1_tmahe"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dmyw15s7nm46b" path="res://Prefabs/fruit.tscn" id="6_agatj"]
 [ext_resource type="PackedScene" uid="uid://dkiuemf5isyg5" path="res://Prefabs/hud.tscn" id="7_hu6eh"]
 [ext_resource type="PackedScene" uid="uid://chs61k6tbq20c" path="res://Prefabs/slime.tscn" id="8_kiy12"]
+[ext_resource type="PackedScene" uid="uid://rwnw03gsqk0h" path="res://Prefabs/flag.tscn" id="9_cdqx6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c0y7"]
 size = Vector2(2270, 49)
@@ -90,5 +91,9 @@ position = Vector2(1468, 100)
 [node name="Slime" parent="." instance=ExtResource("8_kiy12")]
 position = Vector2(308, 209)
 range = 2
+
+[node name="Flag" parent="." instance=ExtResource("9_cdqx6")]
+position = Vector2(232, 208)
+level = "res://Scenes/level_1.tscn"
 
 [connection signal="body_entered" from="DeathArea" to="DeathArea" method="_on_body_entered"]

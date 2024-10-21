@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://n63qtoqmew6b"]
+
+[ext_resource type="PackedScene" uid="uid://drmoukogyktm3" path="res://Prefabs/box.tscn" id="1_63u5q"]
+[ext_resource type="PackedScene" uid="uid://ijyns5c618ip" path="res://Prefabs/player.tscn" id="2_48ru3"]
+[ext_resource type="PackedScene" uid="uid://faa8rv8f5kcs" path="res://Prefabs/tile_map.tscn" id="3_5ilm4"]
+
+[node name="level_2" type="Node2D"]
+
+[node name="Box" parent="." instance=ExtResource("1_63u5q")]
+position = Vector2(126, 129)
+
+[node name="Player" parent="." instance=ExtResource("2_48ru3")]
+position = Vector2(45, 169)
+
+[node name="TileMap" parent="." instance=ExtResource("3_5ilm4")]
